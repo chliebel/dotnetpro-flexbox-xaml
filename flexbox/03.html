@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Öffnen…</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 12px;
+            display: flex;
+            height: 100vh;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .item {
+            display:
+            flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+            width: 70px;
+        }
+
+        .item.selected {
+            background: cornflowerblue;
+            outline: 1px dotted grey;
+        }
+
+        .item span {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<div style="flex: 1; display: flex; flex-direction: column;">
+    <div style="display: flex; background: lightgrey; padding: 10px;">
+        Adresse
+        <input style="flex: 1; margin: 0 10px;" value="C:\foobar\" />
+        <button>Gehe zu</button>
+    </div>
+    <div style="display: flex; flex-direction: row; flex: 1;">
+        <ul style="background: cornflowerblue; margin: 0; padding: 10px; width: 150px;">
+            <li>🗂 Anwendungen</li>
+            <li>🗂 Desktop</li>
+            <li>🗂 Documents</li>
+            <li>🗂 Downloads</li>
+        </ul>
+        <div class="files" style="flex: 1; margin: 10px; display: flex; flex-flow: row wrap; align-content: flex-start; align-items: flex-start;">
+            <div class="item"><span>🗂</span>Bilder</div>
+            <div class="item"><span>🍎</span>Apfel.ico</div>
+            <div class="item"><span>🍌</span>Banane.ico</div>
+            <div class="item"><span>🍋</span>Zitrone.ico</div>
+            <div class="item selected"><span>🍒</span>Kirsche.ico</div>
+            <div class="item"><span>🍍</span>Ananas.ico</div>
+        </div>
+    </div>
+    <div style="background: lightgrey; padding: 5px;">
+        Bereit.
+    </div>
+</div>
+</body>
+</html>
